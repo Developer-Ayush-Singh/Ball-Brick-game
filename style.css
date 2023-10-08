@@ -1,0 +1,49 @@
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#startScreen {
+    cursor: pointer;
+    font-size: 5em;
+    animation: blink 1s infinite alternate, hueRotate 5s infinite linear, glow 1s infinite alternate;
+    filter: drop-shadow(0 0 10px currentColor);
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+@keyframes hueRotate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor, 0 0 20px currentColor;
+    }
+    to {
+        text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
+    }
+}
+
+canvas {
+    display: none;
+    background-color: #000;
+}
